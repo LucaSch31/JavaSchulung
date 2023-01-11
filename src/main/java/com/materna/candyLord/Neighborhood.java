@@ -1,4 +1,4 @@
-package org.example;
+package com.materna.candyLord;
 
 import java.awt.*;
 import java.util.HashMap;

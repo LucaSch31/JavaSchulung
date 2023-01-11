@@ -1,6 +1,4 @@
-package org.example;
-
-import java.lang.reflect.Array;
+package com.materna.candyLord;
 
 public class City {
     Neighborhood[] neighborhoods= new Neighborhood[10];

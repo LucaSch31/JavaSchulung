@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Schema <|-- WochenendSchema
+Schema <|-- WochentagsSchema
+Mitarbeiter <|-- Moderator
+Mitarbeiter <|-- Redakteur
+Redakteur <|- Chefredakteur
+Radiostation "1" -- "*" Mitarbeiter
+Moderator "0..2" -- "*" Radiosendung
+WochenendSchema o-- "16" Radiosendung
+WochentagsSchema o-- "20" Radiosendung
+Redakteur "*" -- "*" Radiosendung
+Chefredakteur "1" -- "1..*" Radiosendung
+Radiostation -> WochenendSchema
+Radiostation -> WochentagsSchema
+Radiostation -> Radiosendung
+
+
+class Mitarbeiter   {
+String Vorname
+String Nachmane
+String Durchwahl
+String PersonalNr
+}
+
+class Redakteur {
+}
+
+class Chefredakteur {
+String MobiltelefonNr
+}
+
+class Moderator {
+}
+
+class Radiostation  {
+}
+
+class Schema    {
+}
+
+class WochenendSchema   {
+}
+
+class WochentagsSchema  {
+}
+
+class Radiosendung  {
+String Dauer
+String Thema
+}
+
+@enduml

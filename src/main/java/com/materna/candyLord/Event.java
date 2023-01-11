@@ -1,4 +1,4 @@
-package org.example;
+package com.materna.candyLord;
 
 public abstract class Event {
      String description;
