@@ -1,0 +1,107 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Game *-- "1 " City
+Game *- "1" Player
+Player o-- "8 " Candy
+City o-- "*" Neighborhood
+Event <|-- Robbery
+Event <|-- findCandy
+Event <|-- ownCandys
+Event <|-- noEvent
+Player o- Neighborhood
+Candy ..> Neighborhood
+
+Game ..> RandomGameEvent
+RandomGameEvent ..> Event
+
+
+class Player    {
++inventorySpace: int
++cash: int
++debt: int
++bank: int
++health: int
+
+Player()
+travel(City)
+buyCandy(Candy: candy,int: amount): boolean
+sellCandy(Candy: candy,int: amount): boolean
+lendFromLoanShark(amount: int): boolean
+payOffLoanShark(amount: int): void
+depositMoney(amount: int): void
+withdrawMoney(amount: int): void
+recalculateCandyPrices(): void
+}
+
+class Candy     {
+name: String {final}
+minPrice: int {final}
+maxPrice: int {final}
+amount: int
+currentPrice: int
+
+Candy(name: String, minPrice: int, maxPrice: int)
+calculateCurrentPrice(neighborhood: Neighborhood): void
+increaseAmountBy(amount:int): void
+reduceAmountBy(amount:int): void
+getAmount(): int
+geetCurrentPrice(): int
+}
+
+class City  {
+    +name: String
+    +travelCostPerDistance: double
+    City()
+    +getNeighborhoods(): Neighborhood[]
+    +calculateTravelCost(neighborhood: Neighborhood): int
+}
+
+class Game      {
+    +currentDay: String
+    +Game()
+    +getCurrentDay(): int
+    +proceedToNextDay(): void
+}
+
+class Neighborhood  {
+    +name: String
+    +candyPriceAdjustment: HashMap<Candy,Double>
+    +coordinates: Point
+    +Neighborhood(coordinates: Point, name: String)
+    +changePriceAdjustment(candy: Candy, double): Neighborhood
+    +distanceTo(neighborhood: Neighborhood): double
+    +getname(): String
+}
+
+abstract class Event    {
+description: String {final}
+duration: int {final}
+Event(description: String)
+process(player: Player): void
+getDescription(): String
+getDuration(): int
+}
+
+class Robbery   {
+
+}
+
+class findCandy {
+
+}
+
+class ownCandys {
+
+}
+
+class noEvent   {
+
+}
+
+class RandomGameEvent   {
+RandomGameEvent()
+next(): Event
+}
+
+@enduml
