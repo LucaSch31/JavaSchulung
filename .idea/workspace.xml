@@ -5,45 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4da4609b-2076-4ba9-a55e-60e83b254e14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/arrays/Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/arrays/shortestNames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/arrays/sorting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/characterAndStringProcessing/diamonds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/characterAndStringProcessing/fish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/Aufgabe135.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/Aufgabe2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/BermudaTriangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/SummingCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/SvgCircle1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/TwentyOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/digits/sumOfTheDigits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/imperativeProgramming/LinePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/imperativeProgramming/LinePrinterDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/ElectronicDeviceWattComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/ElectronicDevices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Firebox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/FreeDiscSpaceTimerTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/IceMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/MonitorTube.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Ship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/TV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Toaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/materna/exercises/ownClasses/Tracer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CLuml.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/CLuml.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Candy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Neighborhood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Neighborhood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RandomGameEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/RandomGameEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Robbery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/Robbery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/findCandy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/findCandy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/noEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/materna/candyLord/noEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,16 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lschaefe/IdeaProjects/schulung&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/lschaefe/IdeaProjects/JavaSchulung"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lschaefe\IdeaProjects\JavaSchulung\uml" />
       <recent name="C:\Users\lschaefe\IdeaProjects\CandyLord\src\main\java\com\materna\candyLord" />
     </key>
   </component>
