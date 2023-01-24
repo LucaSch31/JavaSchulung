@@ -4,9 +4,9 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class Neighborhood {
-    String name;
-    HashMap<Candy, Double> candyPriceAdjustment;
-    Point coordinates;
+    private String name;
+    private HashMap<Candy, Double> candyPriceAdjustment;
+    private Point coordinates;
 
     Neighborhood(Point coordinates, String name)    {
         this.coordinates = coordinates;

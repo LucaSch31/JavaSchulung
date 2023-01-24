@@ -3,16 +3,20 @@ package com.materna.candyLord;
 import java.lang.Math;
 
 public class Candy {
-    final String name;
-    final int minPrice;
-    final int maxPrice;
-    int amount;
-    int currentPrice;
+    private final String name;
+    private final int minPrice;
+    private final int maxPrice;
+    private int amount;
+    private int currentPrice;
 
     public Candy(String name, int minPrice, int maxPrice)  {
         this.name = name;
         this.minPrice = minPrice;
         this.maxPrice = maxPrice;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public void calculateCurrentPrice(){

@@ -1,12 +1,23 @@
 package com.materna.candyLord;
 
 public abstract class Event {
-     String description;
-     int duration;
+     private final String description;
+     private final int duration;
 
-     Event()    {}
+     Event(String description, int duration)    {
+          this.description = description;
+          this.duration = duration;
+     }
 
-     Event(String description)    {
-         this.description = description;
+     public void process(Player player) {
+
+     }
+
+     public String getDescription()     {
+          return this.description;
+     }
+
+     public int getDuration()      {
+          return this.duration;
      }
 }

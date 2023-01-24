@@ -1,10 +1,15 @@
 package com.materna.candyLord;
 
-public class Game {
+import java.io.IOException;
 
-    int currentDay;
-    int currentMonth;
-    int currentYear;
+public class Game {
+    public static void main(String[] args) throws IOException {
+        GUI.createGameSurface();
+    }
+
+    private int currentDay;
+    private int currentMonth;
+    private int currentYear;
 
     public String getCurrentDay()   {
         return this.currentYear+"/"+this.currentMonth+"/"+this.currentDay+"/";

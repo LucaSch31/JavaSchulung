@@ -1,5 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
+skinparam groupInheritance 2
 
 Game *-- "1 " City
 Game *- "1" Player
@@ -23,51 +24,53 @@ class Player    {
 +bank: int
 +health: int
 
-Player()
-travel(City)
-buyCandy(Candy: candy,int: amount): boolean
-sellCandy(Candy: candy,int: amount): boolean
-lendFromLoanShark(amount: int): boolean
-payOffLoanShark(amount: int): void
-depositMoney(amount: int): void
-withdrawMoney(amount: int): void
-recalculateCandyPrices(): void
++Player()
++travel(City)
++buyCandy(Candy: candy,int: amount): boolean
++sellCandy(Candy: candy,int: amount): boolean
++lendFromLoanShark(amount: int): boolean
++payOffLoanShark(amount: int): void
++depositMoney(amount: int): void
++withdrawMoney(amount: int): void
++recalculateCandyPrices(): void
 }
 
 class Candy     {
-name: String {final}
-minPrice: int {final}
-maxPrice: int {final}
-amount: int
-currentPrice: int
+-name: String {final}
+-minPrice: int {final}
+-maxPrice: int {final}
+-amount: int
+-currentPrice: int
 
-Candy(name: String, minPrice: int, maxPrice: int)
-calculateCurrentPrice(neighborhood: Neighborhood): void
-increaseAmountBy(amount:int): void
-reduceAmountBy(amount:int): void
-getAmount(): int
-geetCurrentPrice(): int
++Candy(name: String, minPrice: int, maxPrice: int)
++calculateCurrentPrice(neighborhood: Neighborhood): void
++increaseAmountBy(amount:int): void
++reduceAmountBy(amount:int): void
++getAmount(): int
++getCurrentPrice(): int
 }
 
 class City  {
     +name: String
     +travelCostPerDistance: double
-    City()
+    +City(travelCostPerDistance: Double)
     +getNeighborhoods(): Neighborhood[]
     +calculateTravelCost(neighborhood: Neighborhood): int
 }
 
 class Game      {
-    +currentDay: String
+    -currentDay: int
+    -currentMonth: int
+    -currentYear: int
     +Game()
     +getCurrentDay(): int
     +proceedToNextDay(): void
 }
 
 class Neighborhood  {
-    +name: String
-    +candyPriceAdjustment: HashMap<Candy,Double>
-    +coordinates: Point
+    -name: String
+    -candyPriceAdjustment: HashMap<Candy,Double>
+    -coordinates: Point
     +Neighborhood(coordinates: Point, name: String)
     +changePriceAdjustment(candy: Candy, double): Neighborhood
     +distanceTo(neighborhood: Neighborhood): double
@@ -75,12 +78,12 @@ class Neighborhood  {
 }
 
 abstract class Event    {
-description: String {final}
-duration: int {final}
-Event(description: String)
-process(player: Player): void
-getDescription(): String
-getDuration(): int
+-description: String {final}
+-duration: int {final}
++Event(description: String)
++process(player: Player): void
++getDescription(): String
++getDuration(): int-*-
 }
 
 class Robbery   {
@@ -100,8 +103,8 @@ class noEvent   {
 }
 
 class RandomGameEvent   {
-RandomGameEvent()
-next(): Event
+-RandomGameEvent()
++next(): Event
 }
 
 @enduml

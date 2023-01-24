@@ -3,11 +3,11 @@ package com.materna.candyLord;
 public class Player {
     Neighborhood currentLocation;
     Candy[] candys = new Candy[8];
-    int cash;
-    int inventorySpace;
-    int debt;
-    int bank;
-    int health;
+    private int cash;
+    private int inventorySpace;
+    private int debt;
+    private int bank;
+    private int health;
 
     public Player() {
         this.bank = 0;
@@ -17,8 +17,24 @@ public class Player {
         this.inventorySpace = 100;
 
         for(int i=0; i<8; i++)  {
-            this.candys[i].amount=0;
+            this.candys[i].setAmount(0);
         }
+
+        candys = fillCandyArray();
+    }
+
+    public Candy[] fillCandyArray()    {
+        Candy[] candys = new Candy[]    {
+                new Candy("eating paper", 1, 5),
+                new Candy("chocalate", 4, 8),
+                new Candy("sour gum", 7,14),
+                new Candy("sour patches",16,25),
+                new Candy("haribo", 22,32),
+                new Candy("giotto",35,70),
+                new Candy("rafaelo",64, 85),
+                new Candy("toblerone",85, 150)
+        };
+        return candys;
     }
 
     public void travel(Neighborhood nextLocation)    {
@@ -26,14 +42,14 @@ public class Player {
     }
 
     public boolean buyCandy(Candy candy, int amount)    {
-        this.cash -= candy.currentPrice*amount;
+        this.cash -= candy.getCurrentPrice()*amount;
         this.inventorySpace -= amount;
 
         return true;
     }
 
     public boolean sellCandy(Candy candy, int amount)   {
-        this.cash += candy.currentPrice*amount;
+        this.cash += candy.getCurrentPrice()*amount;
         this.inventorySpace += amount;
 
         return true;
@@ -107,5 +123,9 @@ public class Player {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public Neighborhood getCurrentLocation() {
+        return currentLocation;
     }
 }

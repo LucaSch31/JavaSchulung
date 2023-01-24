@@ -1,29 +1,37 @@
 package com.materna.candyLord;
 
-public class City {
-    Neighborhood[] neighborhoods= new Neighborhood[10];
-    String name;
-    double travelCostPerDistance;
+import java.awt.*;
 
-    City()  {
+public class City {
+    public Neighborhood[] neighborhoods;
+    public String name;
+    private double travelCostPerDistance;
+
+    City(Double travelCostPerDistance)  {
         this.name = "New York";
-        neighborhoods[0].name = "hood1";
-        neighborhoods[1].name = "hood2";
-        neighborhoods[2].name = "hood3";
-        neighborhoods[3].name = "hood4";
-        neighborhoods[4].name = "hood5";
-        neighborhoods[5].name = "hood6";
-        neighborhoods[6].name = "hood7";
-        neighborhoods[7].name = "hood8";
-        neighborhoods[8].name = "hood9";
-        neighborhoods[9].name = "hood10";
+        this.travelCostPerDistance = travelCostPerDistance;
+        neighborhoods = createNeighborhoods();
+    }
+
+    public Neighborhood[] createNeighborhoods()   {
+        Neighborhood[] neighborhoods= new Neighborhood[]  {
+                new Neighborhood(new Point(5,2), "Bronx"),
+                new Neighborhood(new Point(6,5), "Queens"),
+                new Neighborhood(new Point(6,10), "Jamaica Bay"),
+                new Neighborhood(new Point(4, 8), "Brooklyn"),
+                new Neighborhood(new Point(3,3), "Manhattan"),
+                new Neighborhood(new Point(1,8),"Jersey City"),
+                new Neighborhood(new Point(8,1),"Long Island Coast"),
+                new Neighborhood(new Point(6,1),"Mount Vernon")
+        };
+        return neighborhoods;
     }
 
 public Neighborhood[] getNeighborhoods(){
         return this.neighborhoods;
 }
 
-public int calculateTravelCost(Neighborhood nextStop)   {
-    return 0;
+public int calculateTravelCost(Neighborhood currentLocation,Neighborhood nextLocation)   {
+        return (int) Math.round(currentLocation.distanceTo(nextLocation)*travelCostPerDistance);
 }
 }
